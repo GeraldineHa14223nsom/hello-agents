@@ -59,6 +59,8 @@ npx @modelcontextprotocol/server-filesystem
 6. 点击 "Install" 开始安装
 7. 等待安装完成，点击 "Finish"
 
+> 💡 **个人备注**：安装完成后需要重新打开终端窗口，环境变量才会生效。
+
 #### 步骤3：验证安装
 
 打开 **PowerShell** 或 **命令提示符**（CMD），输入：
@@ -243,11 +245,5 @@ async def test():
         "npx", "-y",
         "@modelcontextprotocol/server-filesystem",
         "."
-    ])
-    await client.connect()
-    tools = await client.list_tools()
-    print("可用工具：", [t.name for t in tools])
-    await client.disconnect()
 
-asyncio.run(test())
 ```
