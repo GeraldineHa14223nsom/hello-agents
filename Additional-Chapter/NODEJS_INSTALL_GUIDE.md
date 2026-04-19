@@ -100,6 +100,19 @@ npx -v
 3. 输入管理员密码
 4. 完成安装
 
+### 方式2：使用 Homebrew（推荐 macOS 用户）
+
+> 💡 **个人备注**：如果已经安装了 Homebrew，这种方式更方便，也便于后续版本管理。
+
+```bash
+# 安装 Node.js LTS
+brew install node@20
+
+# 如果需要将其加入 PATH
+echo 'export PATH="/usr/local/opt/node@20/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+```
+
 #### 步骤3：验证安装
 
 打开 **终端（Terminal）**，输入：
@@ -243,7 +256,5 @@ from hello_agents.protocols import MCPClient
 async def test():
     client = MCPClient([
         "npx", "-y",
-        "@modelcontextprotocol/server-filesystem",
-        "."
-
+        "@modelcontextp
 ```
