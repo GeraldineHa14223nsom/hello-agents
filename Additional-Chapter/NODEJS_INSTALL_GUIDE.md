@@ -108,8 +108,8 @@ npx -v
 # 安装 Node.js LTS
 brew install node@20
 
-# 如果需要将其加入 PATH
-echo 'export PATH="/usr/local/opt/node@20/bin:$PATH"' >> ~/.zshrc
+# 如果需要将其加入 PATH（Apple Silicon Mac 路径为 /opt/homebrew，Intel Mac 为 /usr/local）
+echo 'export PATH="/opt/homebrew/opt/node@20/bin:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -241,20 +241,4 @@ Node.js 工作正常！
 ```bash
 # 使用npx运行文件系统MCP服务器
 npx -y @modelcontextprotocol/server-filesystem .
-```
-
-如果看到服务器启动信息，说明一切正常！
-
-### 在Python中测试
-
-创建测试脚本 `test_mcp.py`：
-
-```python
-import asyncio
-from hello_agents.protocols import MCPClient
-
-async def test():
-    client = MCPClient([
-        "npx", "-y",
-        "@modelcontextp
 ```
