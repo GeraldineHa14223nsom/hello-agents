@@ -70,7 +70,7 @@ jupyter lab
 3. 查看生成的图表`outputs/echarts.html`
 4. 查看生成的数据分析报告`outputs/report.md`
 
-
+> **注意**: 数据文件目前仅支持 `.csv` 和 `.xlsx` 格式，请确保上传前数据表格格式正确。
 
 ## 📂 项目结构
 
