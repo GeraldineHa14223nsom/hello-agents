@@ -17,6 +17,8 @@ docker volume create n8n_data
 docker run -d --restart unless-stopped --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n n8nio/n8n
 ```
 
+> **个人注：** 如果拉取镜像速度很慢，可以考虑配置Docker镜像加速器（如阿里云镜像加速），在Docker Desktop的Settings → Docker Engine中添加 `"registry-mirrors"` 配置项。
+
 现在我们就能在docker里面看到n8n运行啦
 
 ![image-20250912033251997](./N8N_INSTALL_GUIDE/image-20250912033251997.png)
