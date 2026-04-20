@@ -209,6 +209,7 @@ node -e "console.log('Node.js 工作正常！')"
 npm --version
 
 # 4. 测试npx（运行一个简单的包）
+# 注意：首次运行会提示是否安装 cowsay，输入 y 确认即可
 npx cowsay "Hello MCP!"
 ```
 
@@ -238,7 +239,5 @@ Node.js 工作正常！
 
 ### 测试文件系统服务器
 
-```bash
-# 使用npx运行文件系统MCP服务器
-npx -y @modelcontextprotocol/server-filesystem .
+```
 ```
