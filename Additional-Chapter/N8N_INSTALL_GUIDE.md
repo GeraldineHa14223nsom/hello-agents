@@ -19,6 +19,8 @@ docker run -d --restart unless-stopped --name n8n -p 5678:5678 -v n8n_data:/home
 
 > **个人注：** 如果拉取镜像速度很慢，可以考虑配置Docker镜像加速器（如阿里云镜像加速），在Docker Desktop的Settings → Docker Engine中添加 `"registry-mirrors"` 配置项。
 
+> **个人注2：** 如果需要固定使用某个版本的n8n（避免自动更新导致工作流不兼容），可以将镜像标签指定为具体版本号，例如 `n8nio/n8n:1.94.1`，而不是使用默认的 `latest` 标签。可在 [Docker Hub](https://hub.docker.com/r/n8nio/n8n/tags) 查看所有可用版本。
+
 现在我们就能在docker里面看到n8n运行啦
 
 ![image-20250912033251997](./N8N_INSTALL_GUIDE/image-20250912033251997.png)
