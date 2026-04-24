@@ -72,12 +72,12 @@ jupyter lab
 
 > **注意**: 数据文件目前仅支持 `.csv` 和 `.xlsx` 格式，请确保上传前数据表格格式正确。
 
-> **个人备注**: 测试时发现大文件（>10MB）分析较慢，建议先对数据采样后再传入，例如使用 `df.sample(1000)` 取1000行进行快速验证。对于包含中文列名的数据集，建议在传入前将列名转为英文，避免部分环境下的编码问题。读取CSV时若遇到编码报错，可尝试 `pd.read_csv('file.csv', encoding='gbk')` 解决。
+> **个人备注**: 测试时发现大文件（>10MB）分析较慢，建议先对数据采样后再传入，例如使用 `df.sample(1000)` 取1000行进行快速验证。对于包含中文列名的数据集，建议在传入前将列名转为英文，避免部分环境下的编码问题。读取CSV时若遇到编码报错，可尝试 `pd.read_csv('file.csv', encoding='gbk')` 解决。另外，如果运行环境在Windows上，路径分隔符可能导致输出文件保存失败，建议使用 `os.path.join()` 拼接路径而非硬编码斜杠。
 
 ## 📂 项目结构
 
 ```
-jjyaoao-CodeReviewAgent/
+1zrj-DataAnalysisAgent/
 ├── README.md              # 项目说明文档
 ├── requirements.txt       # 依赖列表
 ├── .gitignore            # Git忽略文件
